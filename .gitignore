@@ -1,0 +1,11 @@
+.idea/*
+.settings/*
+
+*.class
+*.war
+*.jar
+*.ear
+
+.classpath
+.project
+Patterns.iml
