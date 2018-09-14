@@ -13,25 +13,30 @@ import basepatterns.creational.factory.Factories.*;
 
 class Program {
 
-    public static void main(String[] args) throws Exception {
-        try (Scanner scanner = new Scanner(System.in)) {
-        while (true) {
-            System.out.println("Please, enter what language developer you need:");
-                String language = scanner.next();
-                DevelopersFactory developersFactory = createDeveloperBySpeciality(language);
-                Developer developer = developersFactory.createDeveloper();
-                developer.writeCode();
-            }
-        }
-    }
+	public static void main(String[] args) {
+		try (Scanner scanner = new Scanner(System.in)) {
+			while (true) {
+				try {
+					System.out.println();
+					System.out.println("Please, enter what language developer you need:");
+					String language = scanner.next();
+					DevelopersFactory developersFactory;
+					developersFactory = createDeveloperBySpeciality(language);
+					Developer developer = developersFactory.createDeveloper();
+					developer.writeCode();
+				} catch (ExceptionUnknownSpeciality e) {
+				}
+			}
+		}
+	}
 
-    private static DevelopersFactory createDeveloperBySpeciality(String speciality) throws ExceptionUnknownSpeciality {
-        if (speciality.equalsIgnoreCase("java")) {
-            return new JavaDeveloperFactory();
-        } else if (speciality.equalsIgnoreCase("c++")) {
-            return new CppDeveloperFactory();
-        } else {
-            throw new ExceptionUnknownSpeciality(speciality);
-        }
-    }
+	private static DevelopersFactory createDeveloperBySpeciality(String speciality) throws ExceptionUnknownSpeciality {
+		if (speciality.equalsIgnoreCase("java")) {
+			return new JavaDeveloperFactory();
+		} else if (speciality.equalsIgnoreCase("c++")) {
+			return new CppDeveloperFactory();
+		} else {
+			throw new ExceptionUnknownSpeciality(speciality);
+		}
+	}
 }
