@@ -1,6 +1,7 @@
 .idea/*
 .settings/*
 bin/*
+out/*
 
 *.class
 *.war
