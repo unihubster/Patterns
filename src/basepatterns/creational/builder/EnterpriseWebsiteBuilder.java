@@ -1,6 +1,6 @@
 package basepatterns.creational.builder;
 
-public class EnterpriseWebsiteBuilder  extends WebsiteBuilder{
+public class EnterpriseWebsiteBuilder extends WebsiteBuilder {
 
 	@Override
 	void buildName() {
