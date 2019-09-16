@@ -2,11 +2,11 @@ package basepatterns.creational.factory;
 
 import java.util.Scanner;
 
-import basepatterns.creational.factory.Enteties.Developer;
-import basepatterns.creational.factory.Exception.ExceptionUnknownSpeciality;
-import basepatterns.creational.factory.Factories.CppDeveloperFactory;
-import basepatterns.creational.factory.Factories.DevelopersFactory;
-import basepatterns.creational.factory.Factories.JavaDeveloperFactory;
+import basepatterns.creational.factory.enteties.Developer;
+import basepatterns.creational.factory.exception.ExceptionUnknownSpeciality;
+import basepatterns.creational.factory.factories.CppDeveloperFactory;
+import basepatterns.creational.factory.factories.DevelopersFactory;
+import basepatterns.creational.factory.factories.JavaDeveloperFactory;
 
 /*
  Pattern lesson "FactoryMethod"
